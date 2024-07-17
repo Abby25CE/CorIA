@@ -1,5 +1,4 @@
 import { PrismaClient } from "@prisma/client";
-import { exportTraceState } from "next/dist/trace";
 
 declare global {
   var prisma: PrismaClient | undefined;
