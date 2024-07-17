@@ -15,6 +15,19 @@ const RegistrationFormStep = (props: Props) => {
 
   setValue("otp", onOTP);
 
+  switch (currentStep) {
+    case 1:
+      return (
+        <TypeSelectionForm
+          register={register}
+          userType={onUserType}
+          setUserType={setOnUserType}
+        ></TypeSelectionForm>
+      );
+    case 2:
+    case 3:
+  }
+
   return;
 };
 
