@@ -1,6 +1,15 @@
+"use client";
 import { useState } from "react";
 import { useFormContext } from "react-hook-form";
 import { useAuthContextHook } from "../../../context/use_auth_context";
+import TypeSelectionForm from "./type_selection_form";
+import dynamic from "next/dynamic";
+import { Spinner } from "@/components/spinner";
+
+const DetailForm = dynamic(() => import("./account_details_form"), {
+  ssr: false,
+  loading: Spinner,
+});
 type Props = {};
 
 const RegistrationFormStep = (props: Props) => {
@@ -20,11 +29,12 @@ const RegistrationFormStep = (props: Props) => {
       return (
         <TypeSelectionForm
           register={register}
-          userType={onUserType}
           setUserType={setOnUserType}
+          userType={onUserType}
         ></TypeSelectionForm>
       );
     case 2:
+      return <DetailForm></DetailForm>;
     case 3:
   }
 
