@@ -1,0 +1,22 @@
+import OTPInput from "@/components/otp";
+
+type Props = {
+  setOTP: React.Dispatch<React.SetStateAction<string>>;
+  onOTP: string;
+};
+
+const OTPForm = ({ onOTP, setOTP }: Props) => {
+  return (
+    <>
+      <h2 className="text-gravel md:text-4xl font-bold">Enter OTP</h2>
+      <p className="text-iridium md:text-sm">
+        Enter the one Time password that was sent to your email{" "}
+      </p>
+      <div className="w-full justify-center flex py-5">
+        <OTPInput otp={onOTP} setOTP={setOTP}></OTPInput>
+      </div>
+    </>
+  );
+};
+
+export default OTPForm;
