@@ -1,6 +1,7 @@
 import React from "react";
 import { currentUser } from "@clerk/nextjs";
 import { redirect } from "next/navigation";
+import Image from "next/image";
 
 type Props = {
   children: React.ReactNode;
@@ -14,7 +15,7 @@ const Layout = async ({ children }: Props) => {
   return (
     <div className="h-screen flex w-full justify-center">
       <div className="w-[600px] ld:w-full flex flex-col items-start p-6">
-        <img
+        <Image
           src="/images/logo.png"
           alt="LOGO"
           sizes="100vw"
