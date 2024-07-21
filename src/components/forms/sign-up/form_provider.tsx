@@ -1,7 +1,8 @@
+"use client";
+import { Loader } from "@/components/loader";
 import { AuthContextProvider } from "@/context/use_auth_context";
 import { UseSignUpForm } from "@/hooks/sign-up/use_sign_up";
-import { Loader } from "../../loader/index";
-import * as React from "react";
+import React from "react";
 import { FormProvider } from "react-hook-form";
 
 type Props = {

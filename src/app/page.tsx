@@ -13,7 +13,6 @@ import clsx from "clsx";
 import { Check } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import { title } from "process";
 import React from "react";
 
 export default function Home() {
@@ -26,7 +25,7 @@ export default function Home() {
             An AI powered sales assistant chatbot
           </span>
           <Image
-            src="/images/corina-ai-logo.png"
+            src="/images/corinna-ai-logo.png"
             alt="LOGO"
             width={500}
             height={100}
