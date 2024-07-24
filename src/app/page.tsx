@@ -16,13 +16,13 @@ import Link from "next/link";
 import React from "react";
 
 export default function Home() {
-  const post: {
+  /*const post: {
     id: string;
     title: string;
     image: string;
     content: string;
     create;
-  };
+  };*/
   return (
     <main>
       <NavBar />
